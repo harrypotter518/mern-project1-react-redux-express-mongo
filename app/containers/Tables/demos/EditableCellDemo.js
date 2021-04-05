@@ -163,11 +163,11 @@ function CrudTableDemo(props) {
           title="Inventory Data"
           dataTable={dataTable}
           fetchData={(payload) => fetchData(fetchAction(payload, branch))}
-          addEmptyRow={(payload) => { console.log(payload); addEmptyRow(addAction(payload, branch)) }}
-          removeRow={(payload) => { console.log('------remove Row---', payload); removeRow(removeAction(payload, branch)) }}
-          updateRow={(e, payload) => { console.log('-----update Row---', e.target.value); updateRow(updateAction(e, payload, branch)) }}
-          editRow={(payload) => { console.log('------edit Row---', payload), editRow(editAction(payload, branch)) }}
-          finishEditRow={(payload) => { console.log(payload); finishEditRow(saveAction(payload, branch)) }}
+          addEmptyRow={(payload) => addEmptyRow(addAction(payload, branch))}
+          removeRow={(payload) => removeRow(removeAction(payload, branch))}
+          updateRow={(e, payload) => updateRow(updateAction(e, payload, branch))}
+          editRow={(payload) => editRow(editAction(payload, branch))}
+          finishEditRow={(payload) => finishEditRow(saveAction(payload, branch))}
           branch={branch}
         />
       </div>

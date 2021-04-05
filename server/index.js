@@ -9,18 +9,43 @@ const rawdocs = require('./rawdocs');
 const argv = require('./argv');
 const port = require('./port');
 const setup = require('./middlewares/frontendMiddleware');
+
+const bodyParser = require('body-parser');
+const PORT = 4000;
+const cors = require('cors');
+const mongoose = require('mongoose');
+const config = require('./DB.js');
+const businessRoute = require('./business.route');
+
 const isDev = process.env.NODE_ENV !== 'production';
 const ngrok = (isDev && process.env.ENABLE_TUNNEL) || argv.tunnel
   ? require('ngrok')
   : false;
 const { resolve } = require('path');
-// Edit Table
-// const table = require('./Table');
 const app = express();
 
 // If you need a backend, e.g. an API, add your custom backend-specific middleware here
 // app.use('/api', myApi);
 // Load material icons
+
+mongoose.Promise = global.Promise;
+mongoose.connect(config.DB, { useNewUrlParser: true }).then(
+  () => {console.log('Database is connected') },
+  err => { console.log('Can not connect to the database'+ err)}
+);
+
+app.use(cors());
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(bodyParser.json());
+
+app.use('/business', businessRoute);
+
+app.listen(PORT, function(){
+  console.log('Server is running on Port:',PORT);
+});
+
+
+
 app.use('/api/icons', (req, res) => {
   res.json({
     records: [
@@ -39,7 +64,6 @@ app.use('/api/docs', (req, res) => {
 });
 
 app.use('/', express.static('public', { etag: false }));
-// app.use('/api/table', table);
 app.use(favicon(path.join('public', 'favicons', 'favicon.ico')));
 
 // In production we need to pass these values in instead of relying on webpack

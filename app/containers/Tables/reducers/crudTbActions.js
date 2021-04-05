@@ -18,7 +18,6 @@ export const removeAction = (item, branch) => ({
 });
 export const updateAction = (event, item, branch) => ({
   branch,
-
   type: `${branch}/${types.UPDATE_ROW}`,
   event,
   item
