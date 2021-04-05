@@ -1,0 +1,211 @@
+{
+  "contacts": {
+    "-LeHxRIjrj3Y81-dXGt2": {
+      "address": "Ipsum Street no.77 Block A/5A, New York",
+      "avatar": "https://randomuser.me/api/portraits/men/64.jpg",
+      "companyEmail": "johndoe@company.com",
+      "name": "James Doe",
+      "personalEmail": "johndoe@mail.com",
+      "phone": "+6281234567890",
+      "secondaryPhone": "+6280987654321",
+      "title": "Administrator",
+      "website": "http://doeclans.net"
+    },
+    "-LeHxxOaY92RNoVhBR3B": {
+      "address": "Lorem Street no.76 Block B/8B, Brooklyn",
+      "avatar": "https://randomuser.me/api/portraits/men/61.jpg",
+      "companyEmail": "jimdoe@company.com",
+      "favorited": true,
+      "name": "Jim Doe",
+      "personalEmail": "jimdoe@mail.com",
+      "phone": "+657890321145",
+      "title": "System Engineer",
+      "website": "http://doejim.com"
+    },
+    "-LeHz4bb_ksi0Q5fj4ma": {
+      "address": "Dolor Street no.76 Block B/8B, Tokyo",
+      "avatar": "https://randomuser.me/api/portraits/women/90.jpg",
+      "companyEmail": "janedoe@company.com",
+      "name": "Jane Doe",
+      "personalEmail": "janedoe@mail.com",
+      "phone": "+45353695",
+      "secondaryPhone": "+678910111213",
+      "title": "Executive",
+      "website": "http://janedoe.com"
+    },
+    "-LeHzczpKFzREolo5Wmh": {
+      "address": "Paskal Street no.101 Block B/10B, Samarinda",
+      "avatar": "https://randomuser.me/api/portraits/men/2.jpg",
+      "name": "Jinx Doe",
+      "personalEmail": "jinx@mail.com",
+      "phone": "+678543210012",
+      "title": "Security"
+    },
+    "-LeHzzzl1-n2-zx5pgLt": {
+      "address": "Sit amet Street no.76 Block B/8B, New York",
+      "avatar": "https://randomuser.me/api/portraits/women/24.jpg",
+      "companyEmail": "jihan@company.com",
+      "name": "Jihan Doe",
+      "personalEmail": "jihan@mail.com",
+      "phone": "+45353695",
+      "secondaryPhone": "+56743210468",
+      "title": "Marketing"
+    },
+    "-LeI-R5kXKus1Vpp8AyL": {
+      "address": "Vivacus Street no.2 Block C/10A, Paris",
+      "avatar": "https://randomuser.me/api/portraits/men/30.jpg",
+      "name": "Johny Doe",
+      "personalEmail": "johny_doe@mail.com",
+      "phone": "+2234561234",
+      "secondaryPhone": "+6742234235666",
+      "title": "Actor"
+    }
+  },
+  "emails": {
+    "-LeI1adSdfltPapUVxlg": {
+      "avatar": "https://randomuser.me/api/portraits/men/61.jpg",
+      "category": "sent",
+      "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed urna in justo euismod condimentum. Fusce placerat enim et odio molestie sagittis. Vestibulum dignissim orci vitae eros rutrum euismod.</p>\n",
+      "date": "May, 07 2019",
+      "name": "john.doe@mail.com",
+      "stared": true,
+      "subject": "Pellentesque ullamcorper",
+      "time": "23:04"
+    },
+    "-LeI20qO87zBb5yl8YxX": {
+      "avatar": "https://randomuser.me/api/portraits/women/26.jpg",
+      "category": "promos",
+      "content": "<p>Maecenas nisl libero, tincidunt id odio id, feugiat vulputate quam. Vestibulum feugiat rhoncus metus. In non erat et ipsum molestie porta sit amet ut felis. Vestibulum a massa vestibulum, gravida odio id, fringilla ipsum. Ut sed eros finibus, placerat orci id, dapibus mauris.</p>\n",
+      "date": "May, 07 2019",
+      "name": "jane_doe@mail.com",
+      "stared": true,
+      "subject": "Nunc quis sem quis velit tincidunt",
+      "time": "23:06"
+    },
+    "-LeI2H2x1qNItxF_AN0V": {
+      "avatar": "https://randomuser.me/api/portraits/men/31.jpg",
+      "category": "promos",
+      "content": "<p>Pellentesque ullamcorper aliquet ultrices.</p>\n",
+      "date": "May, 07 2019",
+      "name": "johan@doe.com",
+      "stared": true,
+      "subject": "Vivamus sit",
+      "time": "23:07"
+    },
+    "-LeI2ifRoVCr2WB6QFIR": {
+      "avatar": "https://randomuser.me/api/portraits/men/2.jpg",
+      "category": "sent",
+      "content": "<p>Nulla vehicula leo ut augue tincidunt, placerat tempus nulla rutrum. Integer orci justo, fringilla at faucibus vel, pulvinar in eros. Suspendisse eleifend nunc non varius rhoncus. Nam posuere accumsan porta. Integer id orci sed ante tincidunt tincidunt sit amet sed libero.</p>\n",
+      "date": "May, 07 2019",
+      "name": "jinxdoe@mail.net",
+      "subject": "Vestibulum faucibus eget erat eget pretium'",
+      "time": "23:09"
+    },
+    "-LeI2pguWAxQNeEG3e4C": {
+      "avatar": "https://randomuser.me/api/portraits/women/90.jpg",
+      "category": "social",
+      "content": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse sed urna in justo euismod condimentum. Fusce placerat enim et odio molestie sagittis. Vestibulum dignissim orci vitae eros rutrum euismod.</p>\n",
+      "date": "May, 07 2019",
+      "name": "jihan.doe@mail.com",
+      "subject": "Aliquam venenatis magna et odio lobortis maximus'",
+      "time": "23:10"
+    },
+    "-LeI2yAhH5_IJOuEfUKn": {
+      "avatar": "https://randomuser.me/api/portraits/men/67.jpg",
+      "category": "spam",
+      "content": "<p>Integer orci justo, fringilla at faucibus vel, pulvinar in eros.</p>\n",
+      "date": "May, 07 2019",
+      "name": "johny.doe@mail.com",
+      "subject": "Vivamus sit amet interdum elit",
+      "time": "23:10"
+    },
+    "-LeI35Ssha_FIGDpM-Ez": {
+      "avatar": "https://randomuser.me/api/portraits/women/26.jpg",
+      "category": "forums",
+      "content": "<p>Nam posuere accumsan porta.</p>\n",
+      "date": "May, 07 2019",
+      "name": "janedoe@mail.co.id",
+      "subject": "Lorem ipsum dolor sit amet",
+      "time": "23:11"
+    },
+    "-LeI3F4PUo2-aBrmpd-F": {
+      "avatar": "https://randomuser.me/api/portraits/men/2.jpg",
+      "category": "updates",
+      "content": "",
+      "date": "May, 07 2019",
+      "name": "jinx.doe@mail.com",
+      "stared": false,
+      "subject": "Lorem ipsum dolor sit amet",
+      "time": "23:12"
+    },
+    "-LeI3Mu7zVlCJrx2XJpI": {
+      "avatar": "https://randomuser.me/api/portraits/men/64.jpg",
+      "category": "sent",
+      "content": "<p>Cras convallis lacus orci, tristique tincidunt magna consequat in. In vel pulvinar est, at euismod libero. Quisque ut metus sit amet augue rutrum feugiat. Vestibulum bibendum nisi eget magna malesuada, at mattis eros efficitur. Vivamus facilisis quam ullamcorper iaculis gravida.</p>\n",
+      "date": "May, 07 2019",
+      "name": "james.doe@mail.com",
+      "subject": "Pellentesque ullamcorper aliquet ultrices",
+      "time": "23:12"
+    },
+    "-LeI3TgVT1EHRN6YwUUr": {
+      "avatar": "https://randomuser.me/api/portraits/women/90.jpg",
+      "category": "spam",
+      "content": "<p>Nulla vehicula leo ut augue tincidunt, placerat tempus nulla rutrum. Integer orci justo, fringilla at faucibus vel, pulvinar in eros.</p>\n",
+      "date": "May, 07 2019",
+      "name": "jihan_doe@mail.com",
+      "subject": "Dolor",
+      "time": "23:13"
+    },
+    "-LeI3_uwacMDpXLHeNLd": {
+      "avatar": "https://randomuser.me/api/portraits/men/67.jpg",
+      "category": "updates",
+      "content": "<p>Integer orci justo, fringilla at faucibus vel, pulvinar in eros.</p>\n",
+      "date": "May, 07 2019",
+      "name": "johny@doe.com",
+      "subject": "Vivamus sit amet interdum elit",
+      "time": "23:13"
+    }
+  },
+  "tasks": {
+    "-LeHw7zWz6SgiwPlSWxP": {
+      "completed": false,
+      "title": "Lorem ipsum dolor sit amet"
+    },
+    "-LeHwA8W5Gzltrw8z-LT": {
+      "completed": true,
+      "title": "Nunc quis sem quis velit tincidunt congue a sit amet ante"
+    },
+    "-LeHwBVt4UJpv_gGihpX": {
+      "completed": false,
+      "title": "Vestibulum nec mi suscipit"
+    },
+    "-LeHwD83R7IOrMG7k_ce": {
+      "completed": true,
+      "title": "Cras convallis lacus orci"
+    },
+    "-LeHwFB-wDcrsi2PZShE": {
+      "completed": true,
+      "title": "Donec dignissim, odio ac imperdiet luctus, ante nisl accumsan justo"
+    },
+    "-LeHwNzY6c-6wz1UtBW0": {
+      "completed": false,
+      "title": "Curabitur egestas consequat lorem"
+    },
+    "-LeHwQ3bai2MXaxb1J8E": {
+      "completed": false,
+      "title": "Vivamus sit amet"
+    },
+    "-LeHwTCwhMTsJH3sijNB": {
+      "completed": false,
+      "title": "Pellentesque ac bibendum tortor"
+    },
+    "-LeHwV6EnVklipoQUu56": {
+      "completed": true,
+      "title": "Ut sed eros finibus, placerat orci id,"
+    },
+    "-LeHwY7AV7sZO39Kyju-": {
+      "completed": false,
+      "title": "Donec commodo convallis ligula"
+    }
+  }
+}

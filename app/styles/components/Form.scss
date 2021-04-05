@@ -1,0 +1,33 @@
+@import "./../mixins";
+$sm: "(max-width: 600px)";
+
+.bodyForm {
+  position: relative;
+  padding: 16px;
+  @media #{$sm} {
+    padding: 15px 10px;
+  }
+  max-height: 450px;
+  overflow: auto;
+}
+.buttonArea {
+  background: rgba(136, 136, 136, 0.15);
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 8px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  button{
+    margin-right: 5px;
+  }
+  p{
+    max-width: 250px;
+    text-align: left;
+    padding-right: 20px;
+    font-size: 11px;
+    color: #8e8e8e
+  }
+}
