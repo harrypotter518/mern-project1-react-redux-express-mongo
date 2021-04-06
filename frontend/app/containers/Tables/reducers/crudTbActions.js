@@ -10,7 +10,7 @@ export const addAction = (anchor, branch) => ({
   branch,
   type: `${branch}/${types.ADD_EMPTY_ROW}`,
   anchor
-});
+}); 
 export const removeAction = (item, branch) => ({
   branch,
   type: `${branch}/${types.REMOVE_ROW}`,
@@ -34,5 +34,9 @@ export const saveAction = (item, branch) => ({
 });
 export const closeNotifAction = branch => ({
   branch,
-  type: `${branch}/${notification.CLOSE_NOTIF}`,
+  type: `${branch}/${notifictiaon.CLOSE_NOTIF}`,
 });
+
+export const getDataAction = () => ({
+  type: 'GET_DATA'
+})

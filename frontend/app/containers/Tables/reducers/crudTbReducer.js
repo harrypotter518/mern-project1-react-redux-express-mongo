@@ -100,6 +100,11 @@ export default function reducer(state = initialImmutableState, action = {}) {
       return state.withMutations((mutableState) => {
         mutableState.set('notifMsg', '');
       });
+
+    case `GET_DATA`:
+      return state.withMutations((mutableState) => {
+        mutableState.set('notifMsg', '');
+      });
     default:
       return state;
   }
