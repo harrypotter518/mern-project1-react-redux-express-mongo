@@ -3,9 +3,19 @@ const bodyParser = require("body-parser");
 const cors = require('cors')
 require('dotenv').config();
 
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 4000;
 
 const app = express();
+
+
+const mongoose = require('mongoose');
+const config = require('./app/config/db.config.js');
+
+mongoose.Promise = global.Promise;
+mongoose.connect(config.DB, { useNewUrlParser: true }).then(
+  () => {console.log('Database is connected') },
+  err => { console.log('Can not connect to the database'+ err)}
+);
 
 app.use(cors());
 
@@ -18,3 +28,5 @@ require("./app/routes/routes.js")(app);
 app.listen(port, () => {
   console.log(`Server is running on port ${port}.`);
 });
+
+
