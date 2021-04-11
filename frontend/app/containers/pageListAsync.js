@@ -69,6 +69,27 @@ export const EditableCell = Loadable({
   loader: () => import('./Tables/EditableCell'),
   loading: Loading,
 });
+
+export const SecondEditableCell = Loadable({
+  loader: () => import('./Tables/SecondEditableCell'),
+  loading: Loading,
+});
+
+export const ThirdEditableCell = Loadable({
+  loader: () => import('./Tables/ThirdEditableCell'),
+  loading: Loading,
+});
+
+export const FourthEditableCell = Loadable({
+  loader: () => import('./Tables/FourthEditableCell'),
+  loading: Loading,
+});
+
+export const FifthEditableCell = Loadable({
+  loader: () => import('./Tables/FifthEditableCell'),
+  loading: Loading,
+});
+
 export const TreeTable = Loadable({
   loader: () => import('./Tables/TreeTable'),
   loading: Loading,

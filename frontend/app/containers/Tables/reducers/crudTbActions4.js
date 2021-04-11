@@ -1,5 +1,5 @@
 import * as notification from 'enl-redux/constants/notifConstants';
-import * as types from './crudTbConstants';
+import * as types from './crudTbConstants4';
 import axios from 'axios';
 
 export const fetchAction = (items, branch) => ({
@@ -41,15 +41,15 @@ export const closeNotifAction = branch => ({
 });
 
 export const addDataAction = item => ({
-  branch: 'crudTableDemo',
+  branch: 'FourthcrudTableDemo',
   type: 'ADD_DATA',
   payload: item
 })
 
 export const getDataAction = (dispatch) => {  
-    return axios.get('http://localhost:5000/country/').then(res => {      
+    return axios.get('http://localhost:5000/supplier/').then(res => {      
       dispatch({
-        branch: 'crudTableDemo',
+        branch: 'FourthcrudTableDemo',
         type: 'GET_DATA',
         payload: res.data
       })

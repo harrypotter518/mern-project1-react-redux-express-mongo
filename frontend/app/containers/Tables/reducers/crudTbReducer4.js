@@ -10,15 +10,19 @@ import {
   REMOVE_ROW,
   EDIT_ROW,
   SAVE_ROW,
-} from './crudTbConstants';
+} from './crudTbConstants4';
 
 const initialState = {
   dataTable: List([]),
   dataInit: List([
     {
       id: '0',
-      countryName: '',
-      countryCurrency: ''
+      name: '',
+      email:'',
+      phone:'',
+      address:'',
+      country:'',
+      companyName:''
       // available: false,
       // edited: true,
     }
@@ -70,7 +74,7 @@ export default function reducer(state = initialImmutableState, action = {}) {
           .update('dataTable', dataTable => dataTable.splice(index, 1))
           .set('notifMsg', notif.removed);
         
-        const response = axios.get('http://localhost:5000/country/delete/'+delete_id)
+        const response = axios.get('http://localhost:5000/supplier/delete/'+delete_id)
           .then(res => console.log(res.data));
       });
     case `${branch}/${UPDATE_ROW}`:
@@ -107,7 +111,7 @@ export default function reducer(state = initialImmutableState, action = {}) {
           )
           .set('notifMsg', notif.saved);
         
-          const response = axios.post('http://localhost:5000/country/update/'+update_id, data)
+          const response = axios.post('http://localhost:5000/supplier/update/'+update_id, data)
           .then(res => console.log(res.data));
       });
     case `${branch}/${CLOSE_NOTIF}`:
@@ -118,12 +122,13 @@ export default function reducer(state = initialImmutableState, action = {}) {
     case `ADD_DATA`:
       return state.withMutations((mutableState) => {
         mutableState.set('notifMsg', 'ADD');
-        const response = axios.post('http://localhost:5000/country/add', action.payload)
+        const response = axios.post('http://localhost:5000/supplier/add', action.payload)
           .then(res => console.log(res.data));
       });
 
     case `GET_DATA`:
       return state.withMutations((mutableState) => {
+        console.log(action.payload);
        mutableState.set('dataTable', fromJS(action.payload));
       });
 

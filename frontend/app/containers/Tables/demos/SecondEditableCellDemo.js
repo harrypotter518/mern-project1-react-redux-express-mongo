@@ -15,7 +15,7 @@ import {
   closeNotifAction,
   addDataAction,
   getDataAction
-} from '../reducers/crudTbActions';
+} from '../reducers/crudTbActions2';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
@@ -31,43 +31,33 @@ const anchorTable = [
     initialValue: '',
     hidden: true
   }, {
-    name: 'countryName',
-    label: 'Country Name',
+    name: 'coType',
+    label: 'Commodity Type',
     type: 'text',
     initialValue: '',
     width: 'auto',
     hidden: false
-  }, {
-    name: 'countryCurrency',
-    label: 'Currency',
-    type: 'string',
-    initialValue: 0,
-    width: 'auto',
-    hidden: false
-   }
+  }
 ];
 const dataApi = [
     {
       id:"1",
-      countryName: 'Russia',
-      countryCurrency: 'rub'
-    
+      coType: 'Rubber',
+          
     }, 
 ];
 
 function CrudTableDemo(props) {
   const { classes } = props;
-
   // Redux State
-  const branch = 'crudTableDemo';
+  const branch = 'SecondcrudTableDemo';
   const dataTable = useSelector(state => state.getIn([branch, 'dataTable']));
   const messageNotif = useSelector(state => state.getIn([branch, 'notifMsg']));
 
   const [state, setState] = useState({
     open:false,    
     id:'',
-    countryName : '',
-    countryCurrency : ''
+    coType : ''
   });
 
   // Dispatcher
@@ -96,12 +86,10 @@ function CrudTableDemo(props) {
     getDataAction(getdata);
   }
 
-  const onChangeName = (e) => {
-    setState({...state, countryName: e.target.value});
+  const onChangeType = (e) => {
+    setState({...state, coType: e.target.value});
   }
-  const onChangeCurrency = (e) => {
-    setState({...state, countryCurrency: e.target.value});
-  }
+ 
 
   useEffect(()=>{
     getDataAction(getdata);
@@ -134,15 +122,13 @@ function CrudTableDemo(props) {
 				aria-labelledby="alert-dialog-title"
 				aria-describedby="alert-dialog-description"
 			>
-				<DialogTitle id="alert-dialog-title">{'Add country'}</DialogTitle>
+				<DialogTitle id="alert-dialog-title">{'Add Type'}</DialogTitle>
 				<DialogContent> 
           <form>                 
-            <label>Name :
-              <input type="text" value={state.countryName} onChange={onChangeName} />
+            <label>Type :
+              <input type="text" value={state.coType} onChange={onChangeType} />
             </label>
-            <label>Currency :
-              <input type="text" value={state.countryCurrency} onChange={onChangeCurrency} />
-            </label>                  
+                        
           </form>
 				</DialogContent>
 				<DialogActions>

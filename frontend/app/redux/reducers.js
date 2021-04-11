@@ -14,6 +14,11 @@ import emailFullstack from 'enl-containers/SampleFullstackApps/Email/reducers/em
 import todo from 'enl-containers/SampleApps/Todo/reducers/todoReducer';
 import todoFullstack from 'enl-containers/SampleFullstackApps/Todo/reducers/todoReducer';
 import crudTable from 'enl-containers/Tables/reducers/crudTbReducer';
+import crudTable2 from 'enl-containers/Tables/reducers/crudTbReducer2';
+import crudTable3 from 'enl-containers/Tables/reducers/crudTbReducer3';
+import crudTable4 from 'enl-containers/Tables/reducers/crudTbReducer4';
+import crudTable5 from 'enl-containers/Tables/reducers/crudTbReducer5';
+
 import timeline from 'enl-containers/Pages/Timeline/reducers/timelineReducer';
 import chat from 'enl-containers/Pages/Chat/reducers/chatReducers';
 import ecommerce from 'enl-containers/Pages/Ecommerce/reducers/ecommerceReducers';
@@ -58,6 +63,11 @@ export default function createReducer(injectedReducers = {}) {
     chat,
     ecommerce,
     crudTableDemo: branchReducer(crudTable, 'crudTableDemo'),
+    SecondcrudTableDemo: branchReducer(crudTable2, 'SecondcrudTableDemo'),
+    ThirdcrudTableDemo: branchReducer(crudTable3, 'ThirdcrudTableDemo'),
+    FourthcrudTableDemo: branchReducer(crudTable4, 'FourthcrudTableDemo'),
+    FifthcrudTableDemo: branchReducer(crudTable5, 'FifthcrudTableDemo'),
+
     treeTableArrow: branchReducer(treeTable, 'treeTableArrow'),
     treeTablePM: branchReducer(treeTable, 'treeTablePM'),
     language: languageProviderReducer,

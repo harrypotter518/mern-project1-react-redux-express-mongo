@@ -119,6 +119,7 @@ function Row(props) {
               inputType={inputType}
               branch={branch}
             />
+            
           );
       }
     }

@@ -10,7 +10,11 @@ import {
   Gallery, Status,
   Parent, AppLayout, Responsive, Grid,
   SimpleTable, AdvancedTable, TablePlayground,
-  TreeTable, EditableCell, ReduxForm,
+  TreeTable, 
+  
+  EditableCell,SecondEditableCell, ThirdEditableCell, FourthEditableCell, FifthEditableCell, 
+  
+  ReduxForm,
   DialButton, DateTimePicker, CheckboxRadio,
   Switches, Selectbox,
   SliderRange, Buttons,
@@ -62,7 +66,13 @@ function Application(props) {
         <Route path="/app/tables/basic-table" component={SimpleTable} />
         <Route path="/app/tables/data-table" component={AdvancedTable} />
         <Route path="/app/tables/table-playground" component={TablePlayground} />
-        <Route path="/app/tables/editable-cell" component={EditableCell} />
+
+        <Route path="/app/tables/editable-cell" component={EditableCell} />        
+        <Route path="/app/tables/editable-cell-2" component={SecondEditableCell} />
+        <Route path="/app/tables/editable-cell-3" component={ThirdEditableCell} />     
+        <Route path="/app/tables/editable-cell-4" component={FourthEditableCell} />     
+        <Route path="/app/tables/editable-cell-5" component={FifthEditableCell} />     
+
         <Route path="/app/tables/tree-table" component={TreeTable} />
         { /* Form & Button */ }
         <Route exact path="/app/forms" component={Parent} />

@@ -27,7 +27,7 @@ import LanguageProvider from 'containers/LanguageProvider';
 /* eslint-enable import/no-unresolved, import/extensions */
 
 import configureStore from './redux/configureStore';
-
+import logger from 'redux-logger'
 // Import i18n messages
 import { translationMessages } from './i18n';
 

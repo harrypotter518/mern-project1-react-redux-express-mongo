@@ -15,7 +15,7 @@ import {
   closeNotifAction,
   addDataAction,
   getDataAction
-} from '../reducers/crudTbActions';
+} from '../reducers/crudTbActions5';
 import Dialog from '@material-ui/core/Dialog';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
@@ -31,43 +31,51 @@ const anchorTable = [
     initialValue: '',
     hidden: true
   }, {
-    name: 'countryName',
-    label: 'Country Name',
+    name: 'millName',
+    label: 'Mill Name',
     type: 'text',
     initialValue: '',
     width: 'auto',
     hidden: false
   }, {
-    name: 'countryCurrency',
-    label: 'Currency',
-    type: 'string',
-    initialValue: 0,
+    name: 'location',
+    label: 'Location',
+    type: 'text',
+    initialValue: '',
     width: 'auto',
     hidden: false
-   }
+  }, {
+    name: 'country',
+    label: 'Country',
+    type: 'text',
+    initialValue: '',
+    width: 'auto',
+    hidden: false
+  }
 ];
 const dataApi = [
     {
       id:"1",
-      countryName: 'Russia',
-      countryCurrency: 'rub'
-    
+      millName: 'Rubber',
+      location: '',
+      country: ''
+          
     }, 
 ];
 
 function CrudTableDemo(props) {
   const { classes } = props;
-
   // Redux State
-  const branch = 'crudTableDemo';
+  const branch = 'FifthcrudTableDemo';
   const dataTable = useSelector(state => state.getIn([branch, 'dataTable']));
   const messageNotif = useSelector(state => state.getIn([branch, 'notifMsg']));
 
   const [state, setState] = useState({
     open:false,    
     id:'',
-    countryName : '',
-    countryCurrency : ''
+    millName: 'Rubber',
+    location: '',
+    country: ''
   });
 
   // Dispatcher
@@ -97,10 +105,13 @@ function CrudTableDemo(props) {
   }
 
   const onChangeName = (e) => {
-    setState({...state, countryName: e.target.value});
+    setState({...state, millName: e.target.value});
   }
-  const onChangeCurrency = (e) => {
-    setState({...state, countryCurrency: e.target.value});
+  const onChangeLocation = (e) => {
+    setState({...state, location: e.target.value});
+  }
+  const onChangeCountry = (e) => {
+    setState({...state, country: e.target.value});
   }
 
   useEffect(()=>{
@@ -134,15 +145,39 @@ function CrudTableDemo(props) {
 				aria-labelledby="alert-dialog-title"
 				aria-describedby="alert-dialog-description"
 			>
-				<DialogTitle id="alert-dialog-title">{'Add country'}</DialogTitle>
+				<DialogTitle id="alert-dialog-title">{'Add Mills'}</DialogTitle>
 				<DialogContent> 
-          <form>                 
-            <label>Name :
-              <input type="text" value={state.countryName} onChange={onChangeName} />
-            </label>
-            <label>Currency :
-              <input type="text" value={state.countryCurrency} onChange={onChangeCurrency} />
-            </label>                  
+          <form>  
+            <div className="row" style={{ paddingTop:'10px'}}>
+              <div className="col-2">
+                <label>Mill Name :                  
+                </label>  
+              </div>  
+              <div className="col-2">
+              <input type="text" value={state.millName} onChange={onChangeName} />
+              </div>
+            </div>
+
+            <div className="row" style={{ paddingTop:'10px'}}>
+              <div className="col-2">
+                <label>Location :                  
+                </label>  
+              </div>  
+              <div className="col-2">
+              <input type="text" value={state.location} onChange={onChangeLocation} />
+              </div>
+            </div>
+
+            <div className="row" style={{ paddingTop:'10px'}}>
+              <div className="col-2">
+                <label>Country :                  
+                </label>  
+              </div>  
+              <div className="col-2">
+              <input type="text" value={state.country} onChange={onChangeCountry} />
+              </div>
+            </div>
+                        
           </form>
 				</DialogContent>
 				<DialogActions>

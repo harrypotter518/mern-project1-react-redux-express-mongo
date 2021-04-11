@@ -410,9 +410,36 @@ module.exports = [
       },
       {
         key: 'editable_cell',
-        name: 'Table Edit',
+        name: 'Countries',
         icon: 'edit',
         link: '/app/tables/editable-cell'
+      },
+      {
+        key: 'editable_cell2',
+        name: 'Commodity Types',
+        icon: 'edit',
+        link: '/app/tables/editable-cell-2'
+      },
+
+      {
+        key: 'editable_cell3',
+        name: 'Commodities',
+        icon: 'edit',
+        link: '/app/tables/editable-cell-3'
+      },
+
+      {
+        key: 'editable_cell4',
+        name: 'Suppliers',
+        icon: 'edit',
+        link: '/app/tables/editable-cell-4'
+      },
+
+      {
+        key: 'editable_cell5',
+        name: 'Mills',
+        icon: 'edit',
+        link: '/app/tables/editable-cell-5'
       },
       {
         key: 'svg_charts',

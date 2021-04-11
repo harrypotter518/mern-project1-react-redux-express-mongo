@@ -46,6 +46,8 @@ export ThumbnailWidget from './Widget/ThumbnailWidget';
 export GuideSlider from './GuideSlider';
 // Table Components
 export CrudTable from './Tables/CrudTable';
+export CrudTable2 from './Tables/CrudTable2';
+
 export TreeTable from './Tables/TreeTable';
 export AdvTable from './Tables/AdvTable';
 export EmptyData from './Tables/EmptyData';

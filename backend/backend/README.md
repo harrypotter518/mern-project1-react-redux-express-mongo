@@ -20,9 +20,5 @@ yarn start
 
 ### Live demo
 
-https://artem-react-url.herokuapp.com/
 
-```
-Thank you
-Artem Medianyk
 ```

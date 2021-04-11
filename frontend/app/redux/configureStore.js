@@ -8,6 +8,7 @@ import { routerMiddleware } from 'connected-react-router/immutable';
 import createSagaMiddleware from 'redux-saga';
 import createReducer from './reducers';
 import sagas from '../utils/sagas';
+import logger from 'redux-logger'
 
 const sagaMiddleware = createSagaMiddleware();
 
@@ -34,6 +35,7 @@ export default function configureStore(initialState = {}, history) {
     createReducer(),
     fromJS(initialState),
     composeEnhancers(...enhancers),
+    
   );
 
   // Extensions

@@ -417,7 +417,13 @@
   "boilerplate.components.Sidebar.tables.data_table": "Data Table",
   "boilerplate.components.Sidebar.tables.table_playground": "Table Playgound",
   "boilerplate.components.Sidebar.tables.redux_table": "Redux Table",
-  "boilerplate.components.Sidebar.tables.editable_cell": "Table Edit",
+
+  "boilerplate.components.Sidebar.tables.editable_cell": "Countries",
+  "boilerplate.components.Sidebar.tables.editable_cell2": "Commodity Types",
+  "boilerplate.components.Sidebar.tables.editable_cell3": "Commodities",
+  "boilerplate.components.Sidebar.tables.editable_cell4": "Suppliers",
+  "boilerplate.components.Sidebar.tables.editable_cell5": "Mills",
+
   "boilerplate.components.Sidebar.tables.svg_charts": "SVG Chart",
   "boilerplate.components.Sidebar.tables.line_charts": "Line",
   "boilerplate.components.Sidebar.tables.bar_charts": "Bar",
