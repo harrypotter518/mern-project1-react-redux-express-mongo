@@ -205,40 +205,7 @@ function CrudTableDemo(props) {
               value={state.country}
               onChange={onChangeCountry}
             />
-          </Grid>
-        
-          {/* <form>  
-            <div className="row" style={{ paddingTop:'10px'}}>
-              <div className="col-2">
-                <label>Mill Name :                  
-                </label>  
-              </div>  
-              <div className="col-2">
-              <input type="text" value={state.millName} onChange={onChangeName} />
-              </div>
-            </div>
-
-            <div className="row" style={{ paddingTop:'10px'}}>
-              <div className="col-2">
-                <label>Location :                  
-                </label>  
-              </div>  
-              <div className="col-2">
-              <input type="text" value={state.location} onChange={onChangeLocation} />
-              </div>
-            </div>
-
-            <div className="row" style={{ paddingTop:'10px'}}>
-              <div className="col-2">
-                <label>Country :                  
-                </label>  
-              </div>  
-              <div className="col-2">
-              <input type="text" value={state.country} onChange={onChangeCountry} />
-              </div>
-            </div>
-                        
-          </form> */}
+          </Grid>        
 				</DialogContent>
 				<DialogActions>
           <Button onClick={()=>handleClick({action:false})} variant="contained" color="secondary" autoFocus>

@@ -92,10 +92,7 @@ export default defineMessages({
     id: `${scope}.tables.editable_cell`,
     defaultMessage: 'Table Edit',
   },
-  editable_cell2: {
-    id: `${scope}.tables.editable_cell2`,
-    defaultMessage: 'Table Edit2',
-  },
+
 
   svg_charts: {
     id: `${scope}.tables.svg_charts`,

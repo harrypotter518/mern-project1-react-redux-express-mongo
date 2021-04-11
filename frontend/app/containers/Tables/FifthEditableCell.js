@@ -31,13 +31,13 @@ function CrudTablePage(props) {
       </Helmet>
       <PapperBlock
         whiteBg
-        icon="border_color"
-        title={intl.formatMessage(messages.inRowEditTitle)}
-        desc={intl.formatMessage(messages.inRowEditDesc)}
+        // icon="border_color"
+        // title={intl.formatMessage(messages.inRowEditTitle)}
+        // desc={intl.formatMessage(messages.inRowEditDesc)}
       >
         <div className={classes.root}>
           <FifthEditableCellDemo />
-          <SourceReader componentName={docSrc + 'FifthEditableCellDemo.js'} />
+          {/* <SourceReader componentName={docSrc + 'FifthEditableCellDemo.js'} /> */}
         </div>
       </PapperBlock>
     </div>

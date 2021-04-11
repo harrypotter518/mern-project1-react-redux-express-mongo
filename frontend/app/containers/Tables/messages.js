@@ -78,11 +78,11 @@ export default defineMessages({
   },
   editTitle: {
     id: `${scope}.Edit.title`,
-    defaultMessage: 'Editable Cell',
+    defaultMessage: 'Editable Cell vv',
   },
   inRowEditTitle: {
     id: `${scope}.Edit.inRow.title`,
-    defaultMessage: 'In-Row Editable Cell',
+    defaultMessage: 'In-Row Editable Cell vv',
   },
   inRowEditDesc: {
     id: `${scope}.Edit.inRow.desc`,

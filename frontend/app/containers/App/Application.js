@@ -67,11 +67,11 @@ function Application(props) {
         <Route path="/app/tables/data-table" component={AdvancedTable} />
         <Route path="/app/tables/table-playground" component={TablePlayground} />
 
-        <Route path="/app/tables/editable-cell" component={EditableCell} />        
-        <Route path="/app/tables/editable-cell-2" component={SecondEditableCell} />
-        <Route path="/app/tables/editable-cell-3" component={ThirdEditableCell} />     
-        <Route path="/app/tables/editable-cell-4" component={FourthEditableCell} />     
-        <Route path="/app/tables/editable-cell-5" component={FifthEditableCell} />     
+        <Route path="/app/entities/countries" component={EditableCell} />        
+        <Route path="/app/entities/commodityTypes" component={SecondEditableCell} />
+        <Route path="/app/entities/commodities" component={ThirdEditableCell} />     
+        <Route path="/app/entities/suppliers" component={FourthEditableCell} />     
+        <Route path="/app/entities/mills" component={FifthEditableCell} />     
 
         <Route path="/app/tables/tree-table" component={TreeTable} />
         { /* Form & Button */ }

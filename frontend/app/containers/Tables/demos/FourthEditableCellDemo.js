@@ -4,12 +4,11 @@ import { withStyles } from '@material-ui/core/styles';
 import { useSelector, useDispatch } from 'react-redux';
 import { CrudTable, Notification } from 'enl-components';
 import styles from 'enl-components/Tables/tableStyle-jss';
-
 import Input from '@material-ui/core/Input';
 import InputLabel from '@material-ui/core/InputLabel';
 import FormControl from '@material-ui/core/FormControl';
 import FormHelperText from '@material-ui/core/FormHelperText';
-
+import Grid from '@material-ui/core/Grid';
 import {
   fetchAction,
   addAction,
@@ -166,7 +165,7 @@ function CrudTableDemo(props) {
         <CrudTable
           dataInit={dataApi}
           anchor={anchorTable}
-          title="Inventory Data"
+          title="Suppliers"
           dataTable={dataTable}
           fetchData={(payload) => fetchData(fetchAction(payload, branch))}
           addEmptyRow={(payload) => {             
@@ -188,71 +187,109 @@ function CrudTableDemo(props) {
 			>
 				<DialogTitle id="alert-dialog-title">{'Add Supplier'}</DialogTitle>
 				<DialogContent> 
-          <form>    
-            <div className="row" style={{ paddingTop:'10px'}}>
-              <div className="col-2">
-                <label>Name :                 
-                </label>              
-              </div>
-              <div className="col-3">
-                 <input type="text" value={state.name} onChange={onChangeName} />
-              </div>
-            </div>
+          <Grid
+              item
+              md={12}
+              className={classes.demo}
+            >
+            <Input
+              placeholder="Supplier Name"
+              className={classes.input}
+              inputProps={{
+                'aria-label': 'Description',
+              }}
+              style={{ marginTop:'10px', width:'30vw' }}
+              value={state.name} 
+              onChange={onChangeName}
+            />
+          </Grid>
+          <Grid
+              item
+              md={12}
+              className={classes.demo}
+            >
+            <Input
+              placeholder="Supplier Email"
+              className={classes.input}
+              inputProps={{
+                'aria-label': 'Description',
+              }}
+              style={{ marginTop:'10px', width:'30vw' }}
+              value={state.email} 
+              onChange={onChangeEmail}
+            />
+          </Grid>
+          
+          <Grid
+              item
+              md={12}
+              className={classes.demo}
+            >
+            <Input
+              placeholder="Phone Number"
+              className={classes.input}
+              inputProps={{
+                'aria-label': 'Description',
+              }}
+              style={{ marginTop:'10px', width:'30vw' }}              
+              value={state.phone} 
+              onChange={onChangePhone}
+            />
+          </Grid>
+          <Grid
+              item
+              md={12}
+              className={classes.demo}
+            >
+            <Input
+              placeholder="Address"
+              className={classes.input}
+              inputProps={{
+                'aria-label': 'Description',
+              }}
+              style={{ marginTop:'10px', width:'30vw' }}
+              value={state.address}
+              onChange={onChangeAddress}
+            />
+          </Grid>
 
-            <div className="row" style={{ paddingTop:'10px'}} >
-              <div className="col-2">
-                <label>Email :                  
-                </label> 
-              </div>                   
-              <div className="col-3" >
-                <input type="text" value={state.email} onChange={onChangeEmail} />
-              </div>
-            </div>
+          <Grid
+              item
+              md={12}
+              className={classes.demo}
+            >
+            <Input
+              placeholder="Country"
+              className={classes.input}
+              inputProps={{
+                'aria-label': 'Description',
+              }}
+              style={{ marginTop:'10px', width:'30vw' }}
+              value={state.country} 
+              onChange={onChangeCountry}
+            />
+          </Grid>
 
-            <div className="row" style={{ paddingTop:'10px'}}>
-              <div className="col-2">
-                <label>Phone :                  
-                </label>                
-              </div>  
-              <div className="col-3">
-              <input type="text" value={state.phone} onChange={onChangePhone} />
-              </div>
-            </div>
+          <Grid
+              item
+              md={12}
+              className={classes.demo}
+            >
+            <Input
+              placeholder="Company Name"
+              className={classes.input}
+              inputProps={{
+                'aria-label': 'Description',
+              }}
+              style={{ marginTop:'10px', width:'30vw' }}
+              value={state.companyName} 
+              onChange={onChangeCompanyName}
+            />
+          </Grid>
 
-            <div className="row" style={{ paddingTop:'10px'}}>
-              <div className="col-2">
-                <label>Address :                  
-                </label>  
-              </div>  
-              <div className="col-2">
-              <input type="text" value={state.address} onChange={onChangeAddress} />
-              </div>
-            </div>
-
-            <div className="row" style={{ paddingTop:'10px'}}>
-              <div className="col-2">
-                <label>Country :                  
-                </label> 
-                </div>                  
-              <div className="col-3">
-              <input type="text" value={state.country} onChange={onChangeCountry} />
-              </div>
-            </div>
-
-            <div className="row" style={{ paddingTop:'10px'}}>
-              <div className="col-2">
-                <label>Company :                  
-                </label> 
-              </div>               
-              <div className="col-3">
-              <input type="text" value={state.companyName} onChange={onChangeCompanyName} />
-              </div>
-            </div>   
-                        
-          </form>
 				</DialogContent>
 				<DialogActions>
-          <Button onClick={()=>handleClick({action:false})} color="primary" autoFocus>
+          <Button onClick={()=>handleClick({action:false})} variant="contained" color="primary" autoFocus>
 						Save
 					</Button>
 					<Button onClick={()=>handleClose({action:false})} color="primary">

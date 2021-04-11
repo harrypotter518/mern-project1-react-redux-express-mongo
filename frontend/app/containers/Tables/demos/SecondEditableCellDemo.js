@@ -4,7 +4,11 @@ import { withStyles } from '@material-ui/core/styles';
 import { useSelector, useDispatch } from 'react-redux';
 import { CrudTable, Notification } from 'enl-components';
 import styles from 'enl-components/Tables/tableStyle-jss';
-
+import Input from '@material-ui/core/Input';
+import InputLabel from '@material-ui/core/InputLabel';
+import FormControl from '@material-ui/core/FormControl';
+import FormHelperText from '@material-ui/core/FormHelperText';
+import Grid from '@material-ui/core/Grid';
 import {
   fetchAction,
   addAction,
@@ -102,7 +106,7 @@ function CrudTableDemo(props) {
         <CrudTable
           dataInit={dataApi}
           anchor={anchorTable}
-          title="Inventory Data"
+          title="Commodity Types"
           dataTable={dataTable}
           fetchData={(payload) => fetchData(fetchAction(payload, branch))}
           addEmptyRow={(payload) => {             
@@ -124,15 +128,25 @@ function CrudTableDemo(props) {
 			>
 				<DialogTitle id="alert-dialog-title">{'Add Type'}</DialogTitle>
 				<DialogContent> 
-          <form>                 
-            <label>Type :
-              <input type="text" value={state.coType} onChange={onChangeType} />
-            </label>
-                        
-          </form>
+          <Grid
+            item
+            md={12}
+            className={classes.demo}
+          >
+             <Input
+              placeholder="Commodity Type"
+              className={classes.input}
+              inputProps={{
+                'aria-label': 'Description',
+              }}
+              style={{ marginTop:'10px', width:'30vw' }}
+              value={state.coType} 
+              onChange={onChangeType}
+            />
+          </Grid>
 				</DialogContent>
 				<DialogActions>
-          <Button onClick={()=>handleClick({action:false})} color="primary" autoFocus>
+          <Button onClick={()=>handleClick({action:false})} variant="contained" color="primary" autoFocus>
 						Save
 					</Button>
 					<Button onClick={()=>handleClose({action:false})} color="primary">
