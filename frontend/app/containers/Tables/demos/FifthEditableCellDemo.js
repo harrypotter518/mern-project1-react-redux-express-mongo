@@ -4,6 +4,11 @@ import { withStyles } from '@material-ui/core/styles';
 import { useSelector, useDispatch } from 'react-redux';
 import { CrudTable, Notification } from 'enl-components';
 import styles from 'enl-components/Tables/tableStyle-jss';
+import Input from '@material-ui/core/Input';
+import InputLabel from '@material-ui/core/InputLabel';
+import FormControl from '@material-ui/core/FormControl';
+import FormHelperText from '@material-ui/core/FormHelperText';
+import Grid from '@material-ui/core/Grid';
 
 import {
   fetchAction,
@@ -73,7 +78,7 @@ function CrudTableDemo(props) {
   const [state, setState] = useState({
     open:false,    
     id:'',
-    millName: 'Rubber',
+    millName: '',
     location: '',
     country: ''
   });
@@ -114,6 +119,11 @@ function CrudTableDemo(props) {
     setState({...state, country: e.target.value});
   }
 
+
+  const handleChange = event => {
+    setName(event.target.value);
+  };
+
   useEffect(()=>{
     getDataAction(getdata);
   },[state.open])  
@@ -144,10 +154,60 @@ function CrudTableDemo(props) {
 				open={state.open}
 				aria-labelledby="alert-dialog-title"
 				aria-describedby="alert-dialog-description"
+   
 			>
 				<DialogTitle id="alert-dialog-title">{'Add Mills'}</DialogTitle>
-				<DialogContent> 
-          <form>  
+				<DialogContent>
+          <Grid
+            item
+            md={12}
+            className={classes.demo}
+          >
+             <Input
+              placeholder="Mill Name"
+              className={classes.input}
+              inputProps={{
+                'aria-label': 'Description',
+              }}
+              style={{ marginTop:'10px', width:'30vw' }}
+              value={state.millName}
+              onChange={onChangeName} 
+            />
+          </Grid>
+          <Grid
+          item
+          md={12}
+          className={classes.demo}
+          >
+           <Input
+              placeholder="Location"
+              className={classes.input}
+              style={{ marginTop:'10px', width:'30vw' }}
+              inputProps={{
+                'aria-label': 'Description',
+              }}
+              value={state.location} 
+              onChange={onChangeLocation} 
+            />
+          </Grid>
+          <Grid
+          item
+          md={12}
+          className={classes.demo}
+          >
+           <Input
+              placeholder="Country"
+              className={classes.input}
+              style={{ marginTop:'10px', width:'30vw' }}
+              inputProps={{
+                'aria-label': 'Description',
+              }}
+              value={state.country}
+              onChange={onChangeCountry}
+            />
+          </Grid>
+        
+          {/* <form>  
             <div className="row" style={{ paddingTop:'10px'}}>
               <div className="col-2">
                 <label>Mill Name :                  
@@ -178,10 +238,10 @@ function CrudTableDemo(props) {
               </div>
             </div>
                         
-          </form>
+          </form> */}
 				</DialogContent>
 				<DialogActions>
-          <Button onClick={()=>handleClick({action:false})} color="primary" autoFocus>
+          <Button onClick={()=>handleClick({action:false})} variant="contained" color="secondary" autoFocus>
 						Save
 					</Button>
 					<Button onClick={()=>handleClose({action:false})} color="primary">
